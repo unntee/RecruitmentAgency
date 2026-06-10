@@ -1,0 +1,34 @@
+﻿<Window x:Class="RecruitmentAgency.LogWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RecruitmentAgency"
+        mc:Ignorable="d"
+        Title="LogWindow" Height="350" Width="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize">
+    <StackPanel>
+        <TextBlock Text="Авторизация"
+                   HorizontalAlignment="Center"
+                   FontSize="20"/>
+        <TextBlock Text="Кадровое агенство"
+                   HorizontalAlignment="Center"
+                   FontWeight="Light"
+                   FontSize="16"
+                   Margin="0"/>
+        <TextBlock Text="Логин"/>
+        <TextBox x:Name="LoginTB"/>
+        <TextBlock Text="Пароль"/>
+        <PasswordBox x:Name="PasswordTB"/>
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center">
+            <Button Content="Войти"
+                    Click="LogInButton_Click"
+                    IsDefault="True"/>
+            <Button Content="Выйти"
+                    Click="LogOutButton_Click"
+                    IsCancel="True"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
