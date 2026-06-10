@@ -24,6 +24,9 @@ namespace RecruitmentAgency
 
         private void LogInButton_Click(object sender, RoutedEventArgs e) //Лоика кнопки входа с проверкой на правильность логина и пароля
         {
+            LoginTB.ClearValue(BorderBrushProperty); //Сброс цветов рамок к стандартным
+            PasswordTB.ClearValue(BorderBrushProperty);
+            
             if (LoginTB.Text == "hr" && PasswordTB.Password == "admin")
             {
                 new MainWindow().Show();
@@ -31,6 +34,8 @@ namespace RecruitmentAgency
             }
             else
             {
+                LoginTB.BorderBrush = Brushes.Red;
+                PasswordTB.BorderBrush = Brushes.Red;
                 MessageBox.Show("Неверный логин или пароль!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Information);
                 LoginTB.Clear();
                 PasswordTB.Clear();
